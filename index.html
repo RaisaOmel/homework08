@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Тараканьи бега</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="table">
+        <div class="cockroach cockroach1">
+            <input type="checkbox"  id="cockroach1" onclick="order();">
+            <label for="cockroach1"></label>
+        </div>
+        <div class="cockroach cockroach2">
+            <input type="checkbox"  id="cockroach2" onclick="order();">
+            <label for="cockroach2"></label>
+        </div>
+        <div class="cockroach cockroach3">
+            <input type="checkbox"  id="cockroach3" onclick="order();">
+            <label for="cockroach3"></label>
+        </div>
+        <div class="cockroach cockroach4">
+            <input type="checkbox"  id="cockroach4" onclick="order();">
+            <label for="cockroach4"></label>
+        </div>
+        <div class="cockroach cockroach5">
+            <input type="checkbox"  id="cockroach5" onclick="order();">
+            <label for="cockroach5"></label>
+        </div>
+        <div class="cockroach cockroach6">
+            <input type="checkbox"  id="cockroach6" onclick="order();">
+            <label for="cockroach6"></label>
+        </div>
+        <div class="cockroach cockroach7">
+            <input type="checkbox"  id="cockroach7" onclick="order();">
+            <label for="cockroach7"></label>
+        </div>
+        <div class="cockroach cockroach8">
+            <input type="checkbox"  id="cockroach8" onclick="order();">
+            <label for="cockroach8"></label>
+        </div>
+        <div class="count">
+            Словили:
+        </div>
+    </div>
+    <script type="text/javascript">
+        function order()
+        {
+            var audio = new Audio();
+            audio.src = "audi/tupoy-udar.mp3";
+            audio.autoplay = true;
+            // alert("Вы лешили жизни таракана. Стыдно?");
+            return true;
+        }
+</script>
+</body>
+</html>

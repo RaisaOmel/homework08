@@ -1,0 +1,180 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: #ccc;
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: calc(20px + 1.3);
+    position: relative;
+    counter-reset: cockroach;/*инициализация счетчика*/
+} 
+.table{
+    height: 100%;
+    background-image: url("../img/table.jpg");
+    background-repeat: repeat-y;
+    background-size: cover; 
+    overflow: hidden;
+    cursor: url("../img/beater.png"), pointer;
+}
+
+input[type="checkbox"]{
+    position: absolute;
+    left: -50px;
+    top: -20px;
+}
+
+input[type="checkbox"]:checked{
+    counter-increment: cockroach;
+}
+
+input[type="checkbox"]:checked + label{
+    display: none;
+}
+.count{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    font-size: 20px;
+    line-height: calc(20px + 1.3);
+    font-weight: bold;
+    transform: translateX(calc(-50% - 20px));
+    background-color: rgba(255, 255, 255, 0.125);
+    padding: 10px;
+    /* cursor: pointer; */
+}
+.count::after{
+    content: counter(cockroach);
+}
+
+.cockroach{
+    width: 32px;
+    height: 32px;
+    opacity: 0.8;
+    overflow: hidden;
+    position: relative;
+    left: -100px;
+    top: 50%;
+
+}
+
+.cockroach label{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/prusachok.png");
+    cursor: url("../img/beater.png"), pointer; 
+}
+
+.cockroach1{
+    animation-name: runner_1;
+    animation-duration: 10s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0,.91,1,1.39);}
+.cockroach2{
+    animation-name: runner_2;
+    animation-duration: 12s ;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-timing-function: cubic-bezier(0,.91,.94,.35);}
+.cockroach3{ 
+    animation-name: runner_3;
+    animation-duration: 9s ;
+    animation-iteration-count: infinite;
+    animation-delay: 4s;
+    animation-timing-function: cubic-bezier(.18,.33,.73,.6);}
+.cockroach4{
+    animation-name: runner_2;
+    animation-duration: 12s ;
+    animation-iteration-count: infinite;
+    animation-delay: 6s;
+    animation-timing-function: cubic-bezier(.18,.33,.94,.35);}
+.cockroach5{ 
+    animation-name: runner_3;
+    animation-duration: 16s ;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(.18,.33,.73,.6);}    
+.cockroach6{
+    animation-name: runner_1;
+    animation-duration: 9s ;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    animation-timing-function: cubic-bezier(.49,.07,.49,.93));}
+.cockroach7{
+    animation-name: runner_2;
+    animation-duration: 10s ;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+    animation-timing-function: cubic-bezier(.51,-0.01,0,1.02);}
+.cockroach8{ 
+    animation-name: runner_3;
+    animation-duration: 13s ;
+    animation-iteration-count: infinite;
+    animation-delay: 4s;
+    animation-timing-function: cubic-bezier(1,.18,.28,.63);} 
+@keyframes runner_3 {
+    0% { left: -5%;
+        top: 70%;
+        transform: rotate(30deg)}
+    25%{ left: 30%;
+        top: 25%;
+        transform: rotate(50deg)}
+    45%{ left: 70%;
+        top: 5%;
+        transform: rotate(70deg)}    
+    100% {left: 105%;
+        top: 50%;
+        transform: rotate(135deg)}
+            }    
+@keyframes runner_2 {
+    0% { left: -5%;
+        top: 10%;
+        transform: rotate(30deg)}
+    25%{ left: 30%;
+        top: 25%;
+        transform: rotate(150deg)}
+    45%{ left: 10%;
+        top: 65%;
+        transform: rotate(370deg)}    
+    65%{ left: 50%;
+        top: 65%;
+        transform: rotate(90deg)}    
+    100% {left: 105%;
+        top: 20%;
+        transform: rotate(45deg)}
+        }
+
+@keyframes runner_1 {
+    0% { left: -5%;
+        top: 40%;
+        transform: rotate(15deg)}
+    5%{ left: 5%;
+        top: 5%;
+        transform: rotate(45deg)}
+    15%{ left: 15%;
+        top: 15%;
+        transform: rotate(150deg)}
+    25%{ left: 30%;
+        top: 25%;
+        transform: rotate(130deg)}
+    45%{ left: 10%;
+        top: 65%;
+        transform: rotate(250deg)}    
+    65%{ left: 50%;
+        top: 65%;
+        transform: rotate(90deg)}    
+    90%{ left: 75%;
+        top: 10%;
+        transform: rotate(45deg)}
+    100% {left: 105%;
+        top: 90%;
+        transform: rotate(180deg)}
+    }
